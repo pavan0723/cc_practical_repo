@@ -19,19 +19,10 @@ import javax.ejb.Stateless;
 public class CalculatorWS {
 
     /**
-     * This is a sample web service operation
-     */
-//    @WebMethod(operationName = "hello")
-//    public String hello(@WebParam(name = "name") String txt) {
-//        return "Hello " + txt + " !";
-//    }
-
-    /**
      * Web service operation
      */
     @WebMethod(operationName = "add")
     public int add(@WebParam(name = "i") int i, @WebParam(name = "j") int j) {
-//      Addition
         int k = i + j;
         return k;
     }
@@ -40,8 +31,7 @@ public class CalculatorWS {
      * Web service operation
      */
     @WebMethod(operationName = "sub")
-    public int sub(@WebParam(name = "i") int i, @WebParam(name = "j") int j) {
-//      Substraction
+    public int sub(@WebParam(name = "i") int i, @WebParam(name = "j") final int j) {
         int k = i - j;
         return k;
     }
